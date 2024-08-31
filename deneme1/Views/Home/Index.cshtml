@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string viewDataValue = (string)ViewData["StartPageValue"];
+    <label>@viewDataValue</label>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about-1 <a href="https://docs.microsoft.com/aspnet/core">@ViewData["StartPageValueViewData"]</a>.</p>
+    <p>Learn about-2 <a href="https://docs.microsoft.com/aspnet/core">@ViewBag.StartPageValue</a>.</p>
+    <p>Learn about-3 <a href="https://docs.microsoft.com/aspnet/core">@TempData["Id"] - @TempData["Bootcamp"]</a>.</p>
+</div>
+@section scripts{
+    <label>This Page Start Page View</label>
+    <script type="text/javascript">
+       // alert("Test");
+        </script>
+}
