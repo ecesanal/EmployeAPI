@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "deneme1": {
+    "EmployeeAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

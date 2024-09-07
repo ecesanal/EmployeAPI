@@ -1,18 +1,36 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    string viewDataValue = (string)ViewData["StartPageValue"];
-    <label>@viewDataValue</label>
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about-1 <a href="https://docs.microsoft.com/aspnet/core">@ViewData["StartPageValueViewData"]</a>.</p>
-    <p>Learn about-2 <a href="https://docs.microsoft.com/aspnet/core">@ViewBag.StartPageValue</a>.</p>
-    <p>Learn about-3 <a href="https://docs.microsoft.com/aspnet/core">@TempData["Id"] - @TempData["Bootcamp"]</a>.</p>
-</div>
-@section scripts{
-    <label>This Page Start Page View</label>
-    <script type="text/javascript">
-       // alert("Test");
-        </script>
-}
+<h1>Home Index</h1>
+@* @ViewBag.returnValue
+@ViewBag.ResultsquareValue *@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Email</th>
+            <th scope="col">Employee Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+{
+        <tr>
+            <th scope="row">@item?.EmployeeId</th>
+            <td>@item?.EmployeeName</td>
+            <td>@item?.EmployeeEmail</td>
+            <td>@item?.EmployeeNumber</td>
+        </tr>
+        }
+        </tbody>
+    </table>
+<ul>
+
+
+
+</ul>

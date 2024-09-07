@@ -1,4 +1,4 @@
-﻿namespace deneme1.Models
+﻿namespace EmployeeAPI.Models
 {
     public class EmployeeList
     {

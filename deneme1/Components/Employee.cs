@@ -1,7 +1,7 @@
-﻿using deneme1.Models;
+﻿using EmployeeAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace deneme1.Components
+namespace EmployeeAPI.Components
 {
     public class Employee:ViewComponent
     {

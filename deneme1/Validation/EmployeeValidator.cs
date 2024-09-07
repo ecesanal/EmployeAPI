@@ -1,7 +1,7 @@
-﻿using deneme1.Models;
+﻿using EmployeeAPI.Models;
 using FluentValidation;
 
-namespace deneme1.Validation
+namespace EmployeeAPI.Validation
 {
 	public class EmployeeValidator : AbstractValidator<Employee>
 	{

@@ -1,0 +1,41 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "SaveForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SaveForm</h1>
+
+<form
+method="post"
+asp-action="SaveForm"
+asp-controller="Employee"
+data-ajax="true"
+data-ajax-complate="saveComplate"
+data-ajax-success="saveSuccess">
+<input type="text" asp-for="EmployeeName" placeholder="Employee Name" />
+<span asp-validation-for="EmployeeName"></span>
+<br />
+<input type="email" asp-for="EmployeeEmail" placeholder="Employee Email" />
+<span asp-validation-for="EmployeeEmail"></span>
+<br />
+<input type="text" asp-for="EmployeeNumber" placeholder="Employee Phone Number" />
+<span asp-validation-for="EmployeeNumber"></span>
+<br />
+<button type="submit" id="btnClick">Send Form</button>
+</form> 
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+
+    <script type="text/javascript">
+        function saveComplate(data) {
+            alert("Operation Complated");
+        }
+        function saveSuccess(data) {
+            alert("Operation Success");
+        }
+    </script>
+}
+
+
